@@ -1,23 +1,26 @@
 package ee.ttu.tarkvaratehnika.selveleidja.Pesulad;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
-import java.util.stream.Collectors;
+import java.util.List;
+
 
 @RestController
 public class InfoController {
-    private InfoRepository repository;
+    private InfoService infoService;
 
-    public InfoController(InfoRepository repository) {
-        this.repository = repository;
+    public InfoController(InfoService infoService){
+        this.infoService = infoService;
     }
 
-    @RequestMapping(value = "/info/", method = {RequestMethod.GET})
-    public Collection<PesuladInfo> info() {
-        return repository.findAll().stream().collect(Collectors.toList());
+    @CrossOrigin(origins = "http://localhost:8080")
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public List<PesuladInfo> getAllInfo() {
+        return infoService.getAllInfo();
+    }
+
+    @RequestMapping(value = "/info/{id}", method=RequestMethod.GET)
+    public PesuladInfo getInfo(@PathVariable("id") long infoId) {
+        return infoService.getInfoById(infoId);
     }
 }
-

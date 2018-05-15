@@ -1,8 +1,13 @@
 package ee.ttu.tarkvaratehnika.selveleidja.Pesulad;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource
-interface InfoRepository extends JpaRepository<PesuladInfo, Long> {
+import java.util.List;
+
+
+@Repository
+interface InfoRepository extends CrudRepository<PesuladInfo, Long> {
+    @Override
+    public List<PesuladInfo> findAll();
 }
