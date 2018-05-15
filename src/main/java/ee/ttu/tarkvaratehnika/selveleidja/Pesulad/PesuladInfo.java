@@ -46,6 +46,8 @@ public class PesuladInfo {
         this.address = address;
     }
 
+    public void setHind(String hind){ this.hind = hind; }
+
     public String getHind() {
         return hind;
     }

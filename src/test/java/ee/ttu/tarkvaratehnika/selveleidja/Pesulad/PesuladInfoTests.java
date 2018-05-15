@@ -13,36 +13,29 @@ import static org.junit.Assert.*;
 public class PesuladInfoTests {
     @Test
     public void getId() {
-        PesuladInfo pesuladInfo = new PesuladInfo(name, address, hind, kommentaar);
+        PesuladInfo pesuladInfo = new PesuladInfo();
         pesuladInfo.setId(2);
         assertEquals(2,pesuladInfo.id);
     }
 
     @Test
     public void getName() {
-        PesuladInfo name = new PesuladInfo(name, address, hind, kommentaar);
+        PesuladInfo name = new PesuladInfo();
         name.setName("Jazz");
         assertEquals("Jazz", name.name);
     }
 
     @Test
     public void getAddress() {
-        PesuladInfo address = new PesuladInfo(name, address, hind, kommentaar);
+        PesuladInfo address = new PesuladInfo();
         address.setAddress("Paldiski mnt 98a");
         assertEquals("Paldiski mnt 98a", address.address);
     }
 
     @Test
     public void getHind() {
-        PesuladInfo hind = new PesuladInfo(name, address, hind, kommentaar);
+        PesuladInfo hind = new PesuladInfo();
         hind.setHind("0.5€ = 50 sekundit");
         assertEquals("0.5€ = 50 sekundit", hind.hind);
-    }
-
-    @Test
-    public void getKommentaar() {
-        PesuladInfo kommentaar = new PesuladInfo(name, address, hind, kommentaar);
-        kommentaar.setKommentaar("Parim pesula!!");
-        Assert.assertEquals("Parim pesula!", kommentaar.kommentaar);
     }
 }
