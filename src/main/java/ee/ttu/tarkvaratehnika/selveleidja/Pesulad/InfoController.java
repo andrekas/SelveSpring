@@ -15,7 +15,7 @@ public class InfoController {
         this.repository = repository;
     }
 
-    @RequestMapping(value = "/info", method = {RequestMethod.GET})
+    @RequestMapping(value = "/info/", method = {RequestMethod.GET})
     public Collection<PesuladInfo> info() {
         return repository.findAll().stream().collect(Collectors.toList());
     }

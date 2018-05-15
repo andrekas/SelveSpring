@@ -16,7 +16,7 @@ import java.sql.PreparedStatement;
 public class SelveleidjaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SelveleidjaApplication.class, args);
-		/*
+/*
 		try
 		{
 			// create a mysql database connection
@@ -115,7 +115,7 @@ public class SelveleidjaApplication {
 		{
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
-		}*/
+		} */
 	}
 
 	@Bean

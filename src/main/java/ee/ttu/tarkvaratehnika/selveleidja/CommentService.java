@@ -1,4 +1,3 @@
-/*
 package ee.ttu.tarkvaratehnika.selveleidja;
 
 import org.springframework.stereotype.Service;
@@ -13,12 +12,8 @@ public class CommentService {
     public CommentService(CommentRepository commentRepository) {
         this.commentRepository = commentRepository;
     }
-}
-
-
 
     Comment addComment(Comment comment) {
-
         return commentRepository.save(comment);
     }
 
@@ -26,10 +21,9 @@ public class CommentService {
         return commentRepository.findAll();
     }
 
-   Comment getCommentById(long commentId) {
-        return commentRepository.findOne(commentId);
+    Comment getCommentById(long commentId){
+        return commentRepository.findById(commentId).orElse(null);
     }
 }
-*/
 
 

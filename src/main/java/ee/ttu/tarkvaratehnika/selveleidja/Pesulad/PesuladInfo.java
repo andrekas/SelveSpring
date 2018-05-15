@@ -1,8 +1,8 @@
 package ee.ttu.tarkvaratehnika.selveleidja.Pesulad;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 
 @Entity
 public class PesuladInfo {
@@ -51,6 +51,9 @@ public class PesuladInfo {
     public String getHind() {
         return hind;
     }
+
+    @OneToMany(mappedBy="info", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties({"info","comments"})
 
     @Override
     public String toString() {
