@@ -8,25 +8,25 @@ import javax.persistence.Id;
 public class PesuladInfo {
     @Id
     @GeneratedValue
-    int id;
+    long id;
     String name;
     String address;
     String hind;
 
     public PesuladInfo(){}
 
-    public PesuladInfo(int id, String name, String address, String hind){
+    public PesuladInfo(long id, String name, String address, String hind){
         this.id = id;
         this.name = name;
         this.address = address;
         this.hind = hind;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
