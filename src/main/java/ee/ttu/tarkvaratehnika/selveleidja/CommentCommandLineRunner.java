@@ -1,4 +1,4 @@
-/*
+
 package ee.ttu.tarkvaratehnika.selveleidja;
 
 
@@ -24,4 +24,4 @@ public class CommentCommandLineRunner implements CommandLineRunner {
         repository.findAll().forEach(System.out::println);
     }
 }
-*/
+

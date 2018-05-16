@@ -23,8 +23,8 @@ public class Comment {
 */
     @Id
     @GeneratedValue
-    private long id;
-    private String content;
+    public long id;
+    public String content;
 
     public Comment() {}
 
